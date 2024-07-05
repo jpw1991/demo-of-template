@@ -1,0 +1,93 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <!-- If you've cloned/forked this and want to change it, copy the entire file and rename its extension to
+     to csproj.user and then set your own paths. This user file will take precedence over what's set here -->
+    <VALHEIM_INSTALL>/home/joshua/.local/share/Steam/steamapps/common/Valheim</VALHEIM_INSTALL>
+    <BEPINEX_PATH>/home/joshua/.config/r2modmanPlus-local/Valheim/profiles/cheb-development/BepInEx/</BEPINEX_PATH>
+
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>ValheimNewItemTemplate</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+
+    <Company>Cheb Gonaz</Company>
+    <Product>Valheim Mesh Replacer Template</Product>
+    <NeutralLanguage>en</NeutralLanguage>
+
+    <!-- Assembly Attributes -->
+    <AssemblyTitle>$(Product)</AssemblyTitle>
+    <AssemblyDescription>Describe your mod here briefly.</AssemblyDescription>
+    <AssemblyConfiguration>Release</AssemblyConfiguration>
+    <AssemblyCompany>$(Company)</AssemblyCompany>
+    <AssemblyProduct>$(Product)</AssemblyProduct>
+    <AssemblyCopyright>Copyright © 2022</AssemblyCopyright>
+    <AssemblyCulture>$(NeutralLanguage)</AssemblyCulture>
+
+    <!-- ComVisible and Guid -->
+    <ComVisible>false</ComVisible>
+    <Guid>e3243d22-4307-4008-ba36-9f326008cde5</Guid>
+
+    <!-- Version Information -->
+    <Version>0.0.1.0</Version>
+    <FileVersion>$(Version)</FileVersion>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+
+    <!-- Custom IgnoresAccessChecksToAttribute -->
+    <IgnoresAccessChecksToAttributes>
+      assembly_guiutils;assembly_utils;assembly_valheim
+    </IgnoresAccessChecksToAttributes>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="HarmonyX" Version="2.9.0" />
+    <PackageReference Include="JotunnLib" Version="2.20.1" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+
+    <Reference Include="BepInEx">
+      <HintPath>..\..\..\.config\r2modmanPlus-local\Valheim\profiles\cheb-development\BepInEx\core\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\.local\share\Steam\steamapps\common\Valheim\valheim_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>..\..\..\.local\share\Steam\steamapps\common\Valheim\valheim_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\..\.local\share\Steam\steamapps\common\Valheim\valheim_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>..\..\..\.local\share\Steam\steamapps\common\Valheim\valheim_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>..\..\..\.local\share\Steam\steamapps\common\Valheim\valheim_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>..\..\..\.local\share\Steam\steamapps\common\Valheim\valheim_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\..\.local\share\Steam\steamapps\common\Valheim\valheim_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>..\..\..\.local\share\Steam\steamapps\common\Valheim\valheim_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+
+    <Reference Include="assembly_valheim" Publicize="true">
+      <HintPath>..\..\..\.local\share\Steam\steamapps\common\Valheim\valheim_Data\Managed\assembly_valheim.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_utils" Publicize="true">
+      <HintPath>..\..\..\.local\share\Steam\steamapps\common\Valheim\valheim_Data\Managed\assembly_utils.dll</HintPath>
+    </Reference>
+    <Reference Include="assembly_guiutils" Publicize="true">
+      <HintPath>..\..\..\.local\share\Steam\steamapps\common\Valheim\valheim_Data\Managed\assembly_guiutils.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

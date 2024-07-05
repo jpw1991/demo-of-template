@@ -1,0 +1,9 @@
+﻿{
+  "name": "ValheimNewItemTemplate",
+  "description": "A mod that replaces the Demolisher Hammer's mesh & texture with that of a sword.",
+  "version_number": "0.0.1",
+  "website_url": "https://github.com/jpw1991/valheim-new-item-template",
+  "dependencies": [
+    "ValheimModding-Jotunn-2.20.1"
+  ]
+}
